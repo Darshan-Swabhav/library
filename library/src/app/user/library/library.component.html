@@ -1,0 +1,69 @@
+
+
+
+<div class="container-lg"><table class="table" style="width:100%">
+    <div>
+        <thead class="thead-dark">
+            <tr>
+                <th class="th" scope="col" width=90px>#</th>
+               
+                <th class="th" scope="col" width="350px">Name</th>
+                <th class="th" scope="col" width=350px>Author</th>
+                <!-- <th class="th" scope="col" width=350px>Quantity</th> -->
+                <th class="th" scope="col" width=220px>Rent</th>
+            </tr>
+        </thead>
+    </div>
+    <tbody>
+        <div *ngFor="let entry of books">
+            <tr>
+                <td class="td" width=90px >{{entry.ID}}
+                </td>
+             
+                <td class="td" width=350px >{{entry.name}}
+                </td>
+                <td class="td" width=350px >{{entry.author}}
+                <!-- </td>
+                <td class="td" width=350px >{{entry.quantity}}
+                </td> -->
+                <td class="td" width=220px ><button class="btn btn-success" (click)="add(entry.id)"  [disabled]="limit" >Rent</button>
+                   
+                </td>
+               
+            </tr>
+        </div>
+    </tbody>
+</table>
+</div>
+<div class="container-lg"><table class="table" style="width:100%">
+    <div>
+        <thead class="thead-dark">
+            <tr>
+                <!-- <th class="th" scope="col" width=90px>#</th> -->
+               
+                <th class="th" scope="col" width="350px">Name</th>
+                <th class="th" scope="col" width=350px>Author</th>
+                <th class="th" scope="col" width=350px>Dues</th>
+                <th class="th" scope="col" width=220px>Return</th>
+            </tr>
+        </thead>
+    </div>
+    <tbody>
+        <div *ngFor="let entry of userbooks">
+            <tr>
+                <!-- <td class="td" width=90px >{{entry.ID}}
+                </td> -->
+                <td class="td" width=350px >{{entry.Book[0].name}}
+                </td>
+                <td class="td" width=350px >{{entry.Book[0].author}}
+                </td>
+                <td class="td" width=350px >{{entry.dues}}
+                </td>
+                <td class="td" width=220px ><button class="btn btn-success" (click)="return(entry.ID)" >Return</button>
+                </td>
+               
+            </tr>
+        </div>
+    </tbody>
+</table>
+</div>

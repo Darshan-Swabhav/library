@@ -1,0 +1,79 @@
+<p>userdetails works!</p>
+<div id="container" class="container-lg"  >
+
+    <form [formGroup]="userdata" (ngSubmit)="update" *ngIf="toggle" >
+        <div class="maindivtask">
+            <label for="name">ID</label>
+          
+            <input type="text" name="name" id="id" formControlName="uid" placeholder="" readonly  >
+            <label for="name">Username</label>
+            <input type="text" name="name" id="name" formControlName="userid" placeholder="enter user name"  >
+
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname" formControlName="fname" placeholder="enter first name"  >
+            <label for="lname">last Name</label>
+            <input type="text" name="lname" id="lname" formControlName="lname" placeholder="enter last name"  >
+            <br>
+            <label for="address">Address</label>
+            
+            <input type="text" name="address" id="address" formControlName="address" placeholder="enter addrress"  >
+
+            <label for="number">Number</label>
+            <input type="number" name="number" id="number" formControlName="number"
+                placeholder="enter number"    >
+                <!-- <label for="dues">Dues</label>
+                <input type="dues" name="dues" id="dues" formControlName="dues"
+                    placeholder="enter dues"    > -->
+            <div float="center" *ngIf="!userdata.valid">
+                <button type="submit"  id="submit" class="btn btn-warning" disabled
+                 (click)=updatebtn()     >Submit</button>
+            </div>
+
+            <div float="center" *ngIf="userdata.valid">
+                <button type="button" id="submit" class="btn btn-warning" disable=""
+                    (click)=updatebtn()>Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="container-lg"><table class="table" style="width:100%">
+    <div>
+        <thead class="thead-dark">
+            <tr>
+                <th class="th" scope="col" width=50px>#</th>
+               
+                <th class="th" scope="col" width="240px">Uid</th>
+                <th class="th" scope="col" width=250px>Name</th>
+                <th class="th" scope="col" width=150px>Address</th>
+                <th class="th" scope="col" width=100px>Dues</th>
+                <th class="th" scope="col" width=170px>number</th>
+                <th class="th" scope="col" width=160px>Action</th>
+            </tr>
+        </thead>
+    </div>
+    <tbody>
+        <div *ngFor="let entry of user">
+            <tr>
+                <td class="td" width=50px >{{entry.ID}}
+                </td>
+                <td class="td" width=240px >{{entry.uid}}
+                </td>
+                <td class="td" width=250px >{{entry.fname}} {{entry.lname}}    
+                </td>
+                <td class="td" width=150px >{{entry.address}}
+                </td>
+                <td class="td" width=100px >{{entry.dues}}
+                </td>
+                <td class="td" width=170px >{{entry.number}}
+                </td>
+                <td class="td" width=80px ><button type="button"  class="btn btn-warning"[disabled]="toggle" (click)="update(entry.ID)" >Update</button>
+                </td>
+                <td class="td" width=80px ><button type="button" class="btn btn-danger" [disabled]="toggle" (click)="delete(entry.ID)" >Delete</button>
+                </td>
+               
+            </tr>
+        </div>
+    </tbody>
+</table>
+</div>

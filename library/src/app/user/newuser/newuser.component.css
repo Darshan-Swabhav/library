@@ -1,0 +1,84 @@
+input.ng-touched.ng-invalid {
+    border: 3px solid red;
+}
+li:hover span {
+    width: 40px;
+    opacity: 1.0;
+}
+
+input {
+    font-size: 18px;
+    color: #162935;
+    background-color: #f7f7f7;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+input:focus {
+    background: #fff;
+    border: 3px solid #2980b9;
+    outline: none;
+}
+
+#container {
+    width: 700px;
+    margin: 100px auto;
+    background: #b1e1ec;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.th,
+.td {
+    padding: 120 px;
+    text-align: left;
+}
+
+.maindiv {
+    float: left;
+    width: 85%;
+
+}
+
+.subdiv {
+    width: 15%;
+    float: left;
+}
+
+.btn {
+
+    align-self: center;
+   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        border: 3px solid green;
+
+}
+
+.td-select {
+    padding: 120 px;
+    text-align: left;
+    text-decoration: line-through;
+}
+
+
+
+.maintask {
+    height: 59px;
+    float: left;
+    width: 100%;
+}
+
+.span {
+    height: 50px;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+}

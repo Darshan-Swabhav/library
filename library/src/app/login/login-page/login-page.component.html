@@ -1,0 +1,32 @@
+<body>
+    <div id="container" class="container-lg">
+
+        <form [formGroup]="user
+        " (ngSubmit)="login">
+            <div class="maindivtask">
+                <label for="name">username</label>
+                <input type="text" name="name" id="name" formControlName="username" placeholder="enter username">
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" formControlName="password" placeholder="enter password">
+
+
+
+                <div float="center" *ngIf="!user.valid">
+                    <button type="submit" id="submit" class="btn btn-warning" disabled="" (click)=login()>Submit</button>
+                </div>
+
+                <div float="center" *ngIf="user.valid">
+                
+                    <button type="submit" id="submit" class="btn btn-warning" disable="" (click)=login()>Submit</button>
+                </div>
+                <div >
+                    <ul class="nav-item" >
+        <a class="nav-link " href="/newuser">New User</a>
+      </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>

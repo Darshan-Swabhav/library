@@ -1,0 +1,30 @@
+
+
+<body>
+    <div id="container" class="container-lg">
+
+        <form [formGroup]="book" (ngSubmit)="addbook">
+            <div class="maindivtask">
+                <label for="name">Book Name</label>
+                <input type="text" name="name" id="name" formControlName="name" placeholder="enter book name">
+
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" formControlName="author" placeholder="enter author name">
+
+                <label for="quantity">Book quantity</label>
+                <input type="number" name="quantity" id="quantity" formControlName="quantity"
+                    placeholder="enter book quantity">
+
+                <div float="center" *ngIf="!book.valid">
+                    <button type="submit" id="submit" class="btn btn-warning" disabled (click)=addbook()>Submit</button>
+                </div>
+
+                <div float="center" *ngIf="book.valid">
+                    <button type="submit" id="submit" class="btn btn-warning" disable=""
+                        (click)=addbook()>Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>

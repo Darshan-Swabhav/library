@@ -1,0 +1,71 @@
+<p>update-book works!</p>
+
+<body>
+    <div id="container" class="container-lg"  >
+
+        <form [formGroup]="book" (ngSubmit)="update" *ngIf="toggle" >
+            <div class="maindivtask">
+                <label for="name">Book id</label>
+              
+                <input type="text" name="name" id="id" formControlName="id" placeholder="" readonly  >
+                <label for="name">Book Name</label>
+                <input type="text" name="name" id="name" formControlName="name" placeholder="enter book name"  >
+
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" formControlName="author" placeholder="enter author name"  >
+
+                <label for="quantity">Book quantity</label>
+                <input type="number" name="quantity" id="quantity" formControlName="quantity"
+                    placeholder="enter book quantity"    >
+
+                <div float="center" *ngIf="!book.valid">
+                    <button type="submit"  id="submit" class="btn btn-warning" disabled
+                     (click)=updatebtn()     >Submit</button>
+                </div>
+
+                <div float="center" *ngIf="book.valid">
+                    <button type="button" id="submit" class="btn btn-warning" disable=""
+                        (click)=updatebtn()>Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="container-lg">
+        <table class="table" style="width:100%">
+            <div>
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="th" scope="col" width=90px>#</th>
+                        <th class="th" scope="col" width=380px>ID </th>
+                        <th class="th" scope="col" width="240px">Name</th>
+                        <th class="th" scope="col" width=200px>Author</th>
+                        <th class="th" scope="col" width=90px>Quantity</th>
+                        <th class="th" scope="col" width=90px>Update</th>
+                    </tr>
+                </thead>
+            </div>
+            <tbody>
+                <div *ngFor="let entry of books">
+                    <tr>
+                        <td class="td" width=90px>{{entry.ID}}
+                        </td>
+                        <td class="td" width=380px>{{entry.id}}
+                        </td>
+                        <td class="td" width=240px>{{entry.name}}
+                        </td>
+                        <td class="td" width=200px>{{entry.author}}
+                        </td>
+                        <td class="td" width=90px>{{entry.quantity}}
+                        </td>
+                        <td class="td" width=90px>
+                            <button class="btn btn-warning" [disabled]="toggle" (click)="update(entry.ID)">Update</button>
+                        </td>
+                     
+                    </tr>
+                </div>
+            </tbody>
+        </table>
+    </div>
+
+</body>

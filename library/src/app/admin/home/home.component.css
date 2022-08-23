@@ -1,0 +1,27 @@
+.btn-square-xl {
+    width: 200px !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    height: 100px !important;
+    text-align: center;
+    padding: 25px;
+    font-size:24px;
+    float: left;
+    }
+
+    #allTheThings {
+        width: 60%;
+        max-width: 1000px;
+        text-align: center;
+        margin: 8em auto;
+        font-size: 1.3rem;
+        color: #94aab0;
+        display: block;
+      }
+      
+      a{
+          color: #94aab0;
+          text-decoration: none;
+      }
+      
+    

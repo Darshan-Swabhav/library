@@ -1,0 +1,32 @@
+<p>view-book works!</p>
+<div class="container-lg"><table class="table" style="width:100%">
+    <div>
+        <thead class="thead-dark">
+            <tr>
+                <th class="th" scope="col" width=90px>#</th>
+                <th class="th" scope="col" width=400px>ID </th>
+                <th class="th" scope="col" width="280px">Name</th>
+                <th class="th" scope="col" width=220px>Author</th>
+                <th class="th" scope="col" width=110px>Quantity</th>
+            </tr>
+        </thead>
+    </div>
+    <tbody>
+        <div *ngFor="let entry of books">
+            <tr>
+                <td class="td" width=90px >{{entry.ID}}
+                </td>
+                <td class="td" width=400px >{{entry.id}}
+                </td>
+                <td class="td" width=280px >{{entry.name}}
+                </td>
+                <td class="td" width=220px >{{entry.author}}
+                </td>
+                <td class="td" width=110px >{{entry.quantity}}
+                </td>
+               
+            </tr>
+        </div>
+    </tbody>
+</table>
+</div>

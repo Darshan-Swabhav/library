@@ -1,0 +1,36 @@
+<p>delete-book works!</p>
+<div class="container-lg"><table class="table" style="width:100%">
+    <div>
+        <thead class="thead-dark">
+            <tr>
+                <th class="th" scope="col" width=90px>#</th>
+                <th class="th" scope="col" width=380px>ID </th>
+                <th class="th" scope="col" width="240px">Name</th>
+                <th class="th" scope="col" width=200px>Author</th>
+                <th class="th" scope="col" width=90px>Quantity</th>
+                <th class="th" scope="col" width=90px>Delete</th>
+            </tr>
+        </thead>
+    </div>
+    <tbody>
+        <div *ngFor="let entry of books">
+            <tr>
+                <td class="td" width=90px >{{entry.ID}}
+                </td>
+                <td class="td" width=380px >{{entry.id}}
+                </td>
+                <td class="td" width=240px >{{entry.name}}
+                </td>
+                <td class="td" width=200px >{{entry.author}}
+                </td>
+                <td class="td" width=90px >{{entry.quantity}}
+                </td>
+                <td class="td" width=90px >
+                    <button class="btn btn-danger"  (click)="remove(entry.ID)">Delete</button>
+                </td>
+               
+            </tr>
+        </div>
+    </tbody>
+</table>
+</div>
