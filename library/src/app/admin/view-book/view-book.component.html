@@ -3,27 +3,33 @@
     <div>
         <thead class="thead-dark">
             <tr>
-                <th class="th" scope="col" width=90px>#</th>
-                <th class="th" scope="col" width=400px>ID </th>
-                <th class="th" scope="col" width="280px">Name</th>
-                <th class="th" scope="col" width=220px>Author</th>
-                <th class="th" scope="col" width=110px>Quantity</th>
+                <th class="th" scope="col" width=40px>#</th>
+                <th class="th" scope="col" width=240px>ID </th>
+                <th class="th" scope="col" width="160px">Name</th>
+                <th class="th" scope="col" width=160px>Author</th>
+                <th class="th" scope="col" width=120px>Quantity</th>
+                <th class="th" scope="col" width="250px">Action</th>
             </tr>
         </thead>
     </div>
     <tbody>
         <div *ngFor="let entry of books">
             <tr>
-                <td class="td" width=90px >{{entry.ID}}
+                <td class="td" width=40px >{{entry.ID}}
                 </td>
-                <td class="td" width=400px >{{entry.id}}
+                <td class="td" width=240px >{{entry.id}}
                 </td>
-                <td class="td" width=280px >{{entry.name}}
+                <td class="td" width=160px >{{entry.name}}
                 </td>
-                <td class="td" width=220px >{{entry.author}}
+                <td class="td" width=160px >{{entry.author}}
                 </td>
-                <td class="td" width=110px >{{entry.quantity}}
+                <td class="td" width=120px >{{entry.quantity}}
                 </td>
+                <td class="td" width=125px ><button>Update</button>
+                </td>
+                <td class="td" width=125px ><button>Delete</button>
+                </td>
+
                
             </tr>
         </div>
